@@ -1,5 +1,3 @@
-// executor.c
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -24,7 +22,6 @@ int execute_command(char **args) {
         return 0;
     }
 
-    // Check if it's a built-in command
     if (is_builtin(args[0])) {
         return execute_builtin(args);
     }
@@ -40,7 +37,7 @@ int execute_command(char **args) {
         // Child process
         if (execvp(args[0], args) == -1) {
             fprintf(stderr, "grish(a): command not found: %s\n", args[0]);
-            print_random_levi_quote();  // Add flavor on failure
+            print_random_levi_quote();  
             exit(EXIT_FAILURE);
         }
     } else {
