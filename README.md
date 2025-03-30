@@ -33,7 +33,7 @@ grisha-shell/
 └── LICENSE
 ```
 
-**Note:** since this shell uses Unix-specific headers, it will likely not run on Windows. I haven'tt tested it on Windows or macOS.
+**Note:** since this shell uses Unix-specific headers, it will likely not run on Windows. I haven't tested it on Windows or macOS.
 
 ## Build Instructions
 
