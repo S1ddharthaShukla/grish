@@ -1,5 +1,3 @@
-// main.c
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <signal.h>
@@ -17,22 +15,19 @@ void sigint_handler(int sig) {
 }
 
 int main(void) {
-    // Setup AoT-themed banner and init
     clear_screen();
-    print_banner();     // From utils.c
-    init_shell();       // Shell state initialization (env, cwd, etc.)
+    print_banner(); 
+    init_shell();      
 
-    // Handle Ctrl+C
     signal(SIGINT, sigint_handler);
 
-    // Main REPL loop
     while (1) {
-        display_prompt();                  // grish(a)>
-        char *input = read_input();        // Get user input
+        display_prompt();                 
+        char *input = read_input();      
 
         if (input == NULL) {
             printf("\n");
-            break;  // EOF or Ctrl+D
+            break;  
         }
 
         if (is_whitespace(input)) {
@@ -40,10 +35,10 @@ int main(void) {
             continue;
         }
 
-        char **args = parse_input(input);  // Tokenize input
+        char **args = parse_input(input);  
 
         if (args != NULL && args[0] != NULL) {
-            int status = execute_command(args);  // Fork or handle built-ins
+            int status = execute_command(args);  
 
             if (status == SHELL_EXIT) {
                 free(input);
@@ -56,8 +51,8 @@ int main(void) {
         free_args(args);
     }
 
-    cleanup_shell();  // Optional: clear history, free env vars, etc.
-    printf("Goodbye, soldier. \U0001F1F8\U0001F1EB\n"); // AoT outro
+    cleanup_shell();  
+    printf("Goodbye, soldier. \U0001F1F8\U0001F1EB\n"); 
     return 0;
 }
 
