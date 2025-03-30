@@ -1,4 +1,3 @@
-// builtins.c
 #define _DEFAULT_SOURCE 700
 #include <stdio.h>
 #include <stdlib.h>
