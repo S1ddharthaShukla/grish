@@ -12,18 +12,10 @@
 
 #define PROMPT_SYMBOL "grish(a)> "
 
-/**
- * Initializes shell state, environment, or banner.
- */
 void init_shell() {
-    // Any state you want to initialize (config files, env, etc.)
-    // Example: Load AoT quotes, setup history, etc.
     printf("\033[1;32mInitializing grish(a)...\033[0m\n");
 }
 
-/**
- * Displays the prompt dynamically.
- */
 void display_prompt() {
     char cwd[PATH_MAX];
     getcwd(cwd, sizeof(cwd));
@@ -33,9 +25,6 @@ void display_prompt() {
     fflush(stdout);
 }
 
-/**
- * Reads a line of input from the user using getline.
- */
 char *read_input() {
     char *line = NULL;
     size_t len = 0;
@@ -47,7 +36,6 @@ char *read_input() {
         return NULL;  // Handle EOF or Ctrl+D
     }
 
-    // Trim newline character
     if (line[read - 1] == '\n') {
         line[read - 1] = '\0';
     }
@@ -55,11 +43,6 @@ char *read_input() {
     return line;
 }
 
-/**
- * Optionally cleanup resources.
- */
 void cleanup_shell() {
-    // Free any allocated global resources, history, etc.
-    // You can even print an AoT-themed goodbye message here
 }
 
