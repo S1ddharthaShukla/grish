@@ -9,7 +9,6 @@
 - Custom AoT-themed commands like `eren`, `yeager`, `shifter`, `titan`, `paradis`
 - Two extra special commands - `rumbling` and `scouts`. No spoilers, have fun using them ;) 
 
---
 
 ## Project Structure
 
