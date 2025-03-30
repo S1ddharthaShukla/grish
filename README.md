@@ -16,12 +16,12 @@
 ```bash
 grisha-shell/
 ├── src/
-│   ├── main.c              # Entry point
-│   ├── shell.c             # Shell loop and core logic
-│   ├── parser.c            # Command parsing logic
-│   ├── executor.c          # Command execution logic
-│   ├── builtins.c          # Built-in command functions (including AoT-themed)
-│   ├── utils.c             # Helper functions (e.g., trimming, prompt, banner)
+│   ├── main.c              
+│   ├── shell.c             
+│   ├── parser.c            
+│   ├── executor.c          
+│   ├── builtins.c          
+│   ├── utils.c             
 ├── include/
 │   ├── shell.h
 │   ├── parser.h
