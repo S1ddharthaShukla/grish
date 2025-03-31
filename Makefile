@@ -1,5 +1,3 @@
-# grish(a) Shell Makefile
-
 # Compiler and flags
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -std=c99 -Iinclude
