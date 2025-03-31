@@ -1,4 +1,4 @@
-# grish(a) - An AoT Themed Shell
+# grish(a) - A Custom UNIX Shell
 
 > A Tribute to AoT.
 
